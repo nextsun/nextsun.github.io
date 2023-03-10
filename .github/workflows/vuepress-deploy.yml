@@ -8,11 +8,11 @@ jobs:
       uses: actions/checkout@master
 
     - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+      uses: nextsun/nextsun.github.io@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: username/repo
-        TARGET_BRANCH: master
+        TARGET_REPO: nextsun/nextsun.github.io
+        TARGET_BRANCH: gh_pages
         BUILD_SCRIPT: yarn && yarn docs:build
         BUILD_DIR: docs/.vuepress/dist
         CNAME: https://sunleibest.com
