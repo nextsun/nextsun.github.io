@@ -8,6 +8,7 @@ module.exports = {
           { text: 'Home', link: '/' },
           { text: 'Guide', link: '/guide/' },
           { text: 'Test', link: '/test/' },
+          { text: 'Hello', link: '/guide/hello' },
           { text: 'External', link: 'https://google.com' },
         ],
         // sidebar: 'auto'
@@ -21,7 +22,8 @@ module.exports = {
             sidebarDepth: 1,    // 可选的, 默认值是 1
             children: [
               '/',
-              '/test/'
+              '/guide/',
+              '/guide/hello'
             ]
           },
           {
