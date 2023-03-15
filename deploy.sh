@@ -6,4 +6,4 @@ set -e
 # 生成静态文件
 npm run docs:build
 
-scp -r ./docs/.vuepress/dist root@sunleibest.cn:/data/docs/
+scp -r ./docs/.vuepress/dist github@sunleibest.cn:/data/docs/
