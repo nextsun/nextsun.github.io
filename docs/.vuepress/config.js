@@ -1,43 +1,40 @@
+const nav = require("./config/nav");
+const sidebar = require("./config/sidebar");
+
 module.exports = {
     base: '/',
-    title: 'Hello VuePress',
-    description: 'Just playing around',
+    title: '石头的文档',
+    description: '石头的文档',
     themeConfig: {
         // logo: '/assets/img/logo.png',
-        nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/' },
-          { text: 'Test', link: '/test/' },
-          { text: 'Hello', link: '/guide/hello' },
-          { text: 'External', link: 'https://google.com' },
-        ],
-        // sidebar: 'auto'
-        // displayAllHeaders: true, // 默认值：false,
-
-        sidebar: [
-          {
-            title: 'Group 1',   // 必要的
-            path: '/guide/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-            collapsable: false, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
-            children: [
-              '/',
-              '/guide/',
-              '/guide/hello'
-            ]
-          },
-          {
-            title: 'Group 2',
-            path: '/test/',
-            children: [ /* ... */ ],
-            initialOpenGroupIndex: -1 // 可选的, 默认值是 0
-          },
-          {
-            title: 'Group 3',
-            children: [ /* ... */ ],
-            initialOpenGroupIndex: -1 // 可选的, 默认值是 0
-          }
-        ]
-    
+        nav:nav,
+        sidebar:sidebar,
+        // sidebar: 'auto',
+        displayAllHeaders: true, // 默认值：false,
+    },
+    markdown: {
+      // markdown-it-anchor 的选项
+      anchor: { permalink: false },
+      // markdown-it-toc 的选项
+      // toc: { includeLevel: [1, 2] },
+      config: md => {
+        // 使用更多 markdown-it 插件！
+        // md.use(require('vuepress-plugin-code-copy'))
       }
-  }
+    },
+    plugins: [
+      [
+        "vuepress-plugin-code-copy-plus", {
+          selector: 'div[class*="language-"] pre',
+          align: "top",
+          color: "#ffffff",
+          backgroundTransition: true,
+          backgroundColor: "#ffffff",
+          successText: "已复制!",
+          staticIcon:false,
+          trimContent: true
+        },
+      ]
+    ]
+    
+}

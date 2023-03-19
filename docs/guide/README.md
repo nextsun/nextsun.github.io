@@ -1,9 +1,8 @@
-<!-- ---
+---
 sidebar: auto
---- -->
+---
 
-
-# This is guide page1
+# This is guide page1 ！！！
 aaa<br />
 aaa<br />
 aaa<br />
