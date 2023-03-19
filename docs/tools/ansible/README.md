@@ -290,7 +290,7 @@ ansible localhost -m script -a "/data/pkgs/localscript.sh --some-argument 1234"
 ansible localhost -m script -a "/data/pkgs/localscript.py executable=python3"
 ```
 
-### 3.2.8 service
+### 3.2.7 service
 
 + 启动服务
 ``` shell
@@ -318,7 +318,7 @@ ansible localhost -m service -a "name=httpd enabled=no"
 ```
 
 
-### 3.2.9  yum
+### 3.2.8  yum
 
 
 + 使用yum安装软件
@@ -358,3 +358,4 @@ ansible localhost -m yum -a "name=sl use_backend=dnf"
 ``` shell
 ansible localhost -m yum -a "name=sl state=absent"
 ```
+.
