@@ -244,16 +244,16 @@ ansible localhost -m file -a "path=/data/pkgs/testdir state=absent"
 
 ### 3.2.4 copy
 
-复制本地文件到主机
++ 复制本地文件到主机
 ``` shell
 ansible localhost -m copy -a "src=/etc/resolv.conf dest=/data/pkgs/test.txt"
 ```
-复制本地文件到主机并备份目标文件
++ 复制本地文件到主机并备份目标文件
 ``` shell
 ansible localhost -m copy -a "src=/etc/resolv.conf dest=/data/pkgs/test.txt backup=yes"
 ```
 
-复制本地文件到主机并设置权限和用户组
++ 复制本地文件到主机并设置权限和用户组
 ``` shell
 ansible localhost -m copy -a "src=/etc/resolv.conf dest=/data/pkgs/test.txt owner=root group=root mode=0644"
 ```
@@ -290,7 +290,35 @@ ansible localhost -m script -a "/data/pkgs/localscript.sh --some-argument 1234"
 ansible localhost -m script -a "/data/pkgs/localscript.py executable=python3"
 ```
 
-### 3.2.7  yum
+### 3.2.8 service
+
++ 启动服务
+``` shell
+ansible localhost -m service -a "name=httpd state=started"
+```
++ 停止服务
+``` shell
+ansible localhost -m service -a "name=httpd state=stopped"
+```
++ 重启服务
+``` shell
+ansible localhost -m service -a "name=httpd state=restarted"
+```
++ 重新加载服务
+``` shell
+ansible localhost -m service -a "name=httpd state=reloaded"
+```
++ 设置为开机启动
+``` shell
+ansible localhost -m service -a "name=httpd enabled=yes"
+```
++ 取消开机启动
+``` shell
+ansible localhost -m service -a "name=httpd enabled=no"
+```
+
+
+### 3.2.9  yum
 
 
 + 使用yum安装软件
