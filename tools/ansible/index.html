@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ansible 使用指南 | 石头的文档</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="石头的文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.7e95fe29.css" as="style"><link rel="preload" href="/assets/js/app.302b2892.js" as="script"><link rel="preload" href="/assets/js/2.b70f0925.js" as="script"><link rel="preload" href="/assets/js/15.01369678.js" as="script"><link rel="prefetch" href="/assets/js/10.94008700.js"><link rel="prefetch" href="/assets/js/11.498cbc6b.js"><link rel="prefetch" href="/assets/js/12.57f08384.js"><link rel="prefetch" href="/assets/js/13.bc024c40.js"><link rel="prefetch" href="/assets/js/14.953d6d7b.js"><link rel="prefetch" href="/assets/js/16.5907e971.js"><link rel="prefetch" href="/assets/js/3.b7dbaa38.js"><link rel="prefetch" href="/assets/js/4.bd1bad26.js"><link rel="prefetch" href="/assets/js/5.2c0c420a.js"><link rel="prefetch" href="/assets/js/6.327b84ba.js"><link rel="prefetch" href="/assets/js/7.e2309d69.js"><link rel="prefetch" href="/assets/js/8.74b5d2b9.js"><link rel="prefetch" href="/assets/js/9.404b4f44.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7e95fe29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container custom-code-auto-break-line"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">石头的文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/dev/" class="nav-link">
+  Dev
+</a></div><div class="nav-item"><a href="/bigdata/" class="nav-link">
+  BigData
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Deploy" class="dropdown-title"><span class="title">Deploy</span> <span class="arrow down"></span></button> <button type="button" aria-label="Deploy" class="mobile-dropdown-title"><span class="title">Deploy</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/deploy/standard.html" class="nav-link">
+  部署规范
+</a></li><li class="dropdown-item"><!----> <a href="/deploy/standalone.html" class="nav-link">
+  单节点部署
+</a></li><li class="dropdown-item"><!----> <a href="/deploy/cluster.html" class="nav-link">
+  集群部署
+</a></li></ul></div></div><div class="nav-item"><a href="/tools/" class="nav-link router-link-active">
+  Tools
+</a></div><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/dev/" class="nav-link">
+  Dev
+</a></div><div class="nav-item"><a href="/bigdata/" class="nav-link">
+  BigData
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Deploy" class="dropdown-title"><span class="title">Deploy</span> <span class="arrow down"></span></button> <button type="button" aria-label="Deploy" class="mobile-dropdown-title"><span class="title">Deploy</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/deploy/standard.html" class="nav-link">
+  部署规范
+</a></li><li class="dropdown-item"><!----> <a href="/deploy/standalone.html" class="nav-link">
+  单节点部署
+</a></li><li class="dropdown-item"><!----> <a href="/deploy/cluster.html" class="nav-link">
+  集群部署
+</a></li></ul></div></div><div class="nav-item"><a href="/tools/" class="nav-link router-link-active">
+  Tools
+</a></div><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Ansible 使用指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tools/ansible/#_1-安装" class="sidebar-link">1. 安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/tools/ansible/#_2-配置" class="sidebar-link">2. 配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tools/ansible/#ansible-cfg" class="sidebar-link">ansible.cfg</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#hosts" class="sidebar-link">hosts</a></li></ul></li><li><a href="/tools/ansible/#_3-使用" class="sidebar-link">3. 使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-1-主机选择" class="sidebar-link">3.1 主机选择</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-模块使用" class="sidebar-link">3.2 模块使用</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-1-ping" class="sidebar-link">3.2.1  ping</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-2-shell" class="sidebar-link">3.2.2  shell</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-3-file" class="sidebar-link">3.2.3 file</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-4-copy" class="sidebar-link">3.2.4 copy</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-5-synchronize" class="sidebar-link">3.2.5 synchronize</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-6-script" class="sidebar-link">3.2.6  script</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-7-service" class="sidebar-link">3.2.7 service</a></li><li class="sidebar-sub-header"><a href="/tools/ansible/#_3-2-8-yum" class="sidebar-link">3.2.8  yum</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ansible-使用指南">Ansible 使用指南</h1> <p></p><div class="table-of-contents"><ul><li><a href="#_1-安装">1. 安装</a></li><li><a href="#_2-配置">2. 配置</a><ul><li><a href="#ansible-cfg">ansible.cfg</a></li><li><a href="#hosts">hosts</a></li></ul></li><li><a href="#_3-使用">3. 使用</a><ul><li><a href="#_3-1-主机选择">3.1 主机选择</a></li><li><a href="#_3-2-模块使用">3.2 模块使用</a></li><li><a href="#_3-2-1-ping">3.2.1  ping</a></li><li><a href="#_3-2-2-shell">3.2.2  shell</a></li><li><a href="#_3-2-3-file">3.2.3 file</a></li><li><a href="#_3-2-4-copy">3.2.4 copy</a></li><li><a href="#_3-2-5-synchronize">3.2.5 synchronize</a></li><li><a href="#_3-2-6-script">3.2.6  script</a></li><li><a href="#_3-2-7-service">3.2.7 service</a></li><li><a href="#_3-2-8-yum">3.2.8  yum</a></li></ul></li></ul></div><p></p> <p>该使用指南只作为快速参考手册，更多详细信息请参考
+<a href="https://docs.ansible.com/ansible/2.9/index.html" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="_1-安装">1. 安装</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>yum <span class="token function">install</span> epel-release
+yum <span class="token function">install</span> ansible
+</code></pre></div><h2 id="_2-配置">2. 配置</h2> <p>默认配置主目录为</p> <p>/etc/ansible</p> <p>基础配置文件参考如下</p> <h3 id="ansible-cfg">ansible.cfg</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#/etc/ansible/ansible.cfg</span>
+</code></pre></div><h3 id="hosts">hosts</h3> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment">#/etc/ansible/hosts</span>
+
+app01
+app02
+app03
+app04
+app05
+db01
+db02
+db03
+ng01
+ng02
+
+<span class="token section"><span class="token punctuation">[</span><span class="token section-name selector">apps</span><span class="token punctuation">]</span></span>
+app[01:05]
+
+<span class="token section"><span class="token punctuation">[</span><span class="token section-name selector">dbs</span><span class="token punctuation">]</span></span>
+db[01:03]
+
+<span class="token section"><span class="token punctuation">[</span><span class="token section-name selector">ngs</span><span class="token punctuation">]</span></span>
+ng[01:02]
+
+</code></pre></div><h2 id="_3-使用">3. 使用</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible <span class="token operator">&lt;</span>主机选择表达式<span class="token operator">&gt;</span> <span class="token parameter variable">-m</span> <span class="token operator">&lt;</span>模块名称<span class="token operator">&gt;</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;&lt;模块参数&gt;&quot;</span>
+</code></pre></div><h3 id="_3-1-主机选择">3.1 主机选择</h3> <p>更详细的信息请参考<a href="https://docs.ansible.com/ansible/2.9/user_guide/intro_patterns.html" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>通用主机表达式</p> <table><thead><tr><th>描述</th> <th>表达式</th> <th>目标主机</th></tr></thead> <tbody><tr><td>全部主机</td> <td>all (或者 *)</td> <td></td></tr> <tr><td>某台主机</td> <td>host1</td> <td></td></tr> <tr><td>多台主机</td> <td>host1:host2(或者host1,host2)</td> <td></td></tr> <tr><td>某个小组</td> <td>apps</td> <td></td></tr> <tr><td>多个小组</td> <td>apps:dbs</td> <td>apps和dbs组的全部主机</td></tr> <tr><td>例外小组</td> <td>apps:!ngs</td> <td>apps组里面不在dbs的主机</td></tr> <tr><td>交集小组</td> <td>apps:&amp;ngs</td> <td>同时在apps组和dbs组的主机</td></tr></tbody></table> <p>也可以将其组合起来使用</p> <div class="language-ini extra-class"><pre class="language-ini"><code>webservers:dbservers:&amp;staging:!phoenix
+</code></pre></div><p>也可以使用通配符进行匹配</p> <div class="language-ini extra-class"><pre class="language-ini"><code>192.0.\*
+\*.example.com
+\*.com
+app*
+db*
+</code></pre></div><p>使用示例</p> <ul><li>选择全部服务器</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible all <span class="token parameter variable">-m</span> <span class="token function">ping</span>
+</code></pre></div><ul><li>选择app01服务器</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible app01 <span class="token parameter variable">-m</span> <span class="token function">ping</span>
+</code></pre></div><ul><li>选择所有应用服务器</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible apps <span class="token parameter variable">-m</span> <span class="token function">ping</span>
+<span class="token comment">#或者</span>
+ansible app* <span class="token parameter variable">-m</span> <span class="token function">ping</span>
+</code></pre></div><ul><li>选择所有应用服务器和数据库服务器</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible apps,dbs <span class="token parameter variable">-m</span> <span class="token function">ping</span>
+</code></pre></div><h3 id="_3-2-模块使用">3.2 模块使用</h3> <p>使用ansible-doc命令可以查看模块手册
+如想查看shell模块的使用方法可允许如下命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible-doc shell
+</code></pre></div><p>按q退出手册</p> <p>常用模块使用示例如下：</p> <h3 id="_3-2-1-ping">3.2.1  ping</h3> <p>ping 测试</p> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">ping</span>
+</code></pre></div><h3 id="_3-2-2-shell">3.2.2  shell</h3> <ul><li>查看主机情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;hostnamectl&quot;</span>
+</code></pre></div><ul><li>查看cpu情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;lscpu&quot;</span>
+</code></pre></div><ul><li>查看内存情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;free -g&quot;</span>
+</code></pre></div><ul><li>查看磁盘情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;df -Th&quot;</span>
+</code></pre></div><ul><li>查看网络情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;ip addr&quot;</span>
+<span class="token comment">#或者</span>
+ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;ifconfig&quot;</span>
+</code></pre></div><ul><li>查看tcp端口情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;netstat -nltp&quot;</span>
+</code></pre></div><ul><li>查看udp端口情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;netstat -nlup&quot;</span>
+</code></pre></div><ul><li>查看Java进程情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;jps -l&quot;</span>
+</code></pre></div><ul><li>查看nginx进程情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;systemctl status nginx&quot;</span>
+<span class="token comment">#或者</span>
+ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;ps -ef|grep nginx&quot;</span>
+</code></pre></div><ul><li>查看mysql进程情况</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;systemctl status mysqld&quot;</span>
+</code></pre></div><ul><li>查看/data/pkgs/目录里面的文件</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> shell <span class="token parameter variable">-a</span> <span class="token string">&quot;ls -al chdir=/data/pkgs/&quot;</span>
+</code></pre></div><h3 id="_3-2-3-file">3.2.3 file</h3> <ul><li>创建目录</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">file</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;path=/data/pkgs/testdir state=directory mode=0755&quot;</span>
+</code></pre></div><ul><li>修改目录权限和用户组</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">file</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;path=/data/pkgs/testdir state=directory mode=0644 owner=root group=root recurse=yes&quot;</span>
+</code></pre></div><ul><li>创建文件</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">file</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;path=/data/pkgs/testdir/test.txt state=touch&quot;</span>
+</code></pre></div><ul><li>修改文件权限和用户组</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">file</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;path=/data/pkgs/testdir/test.txt owner=root group=root mode=0644 &quot;</span>
+</code></pre></div><ul><li>创建链接文件</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">file</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;src=/data/pkgs/testdir/test.txt dest=/data/pkgs/testdir/test.link  state=link&quot;</span>
+</code></pre></div><ul><li>删除文件</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">file</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;path=/data/pkgs/testdir/test.txt state=absent&quot;</span>
+</code></pre></div><ul><li>删除目录</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">file</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;path=/data/pkgs/testdir state=absent&quot;</span>
+</code></pre></div><h3 id="_3-2-4-copy">3.2.4 copy</h3> <ul><li>复制本地文件到主机</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> copy <span class="token parameter variable">-a</span> <span class="token string">&quot;src=/etc/resolv.conf dest=/data/pkgs/test.txt&quot;</span>
+</code></pre></div><ul><li>复制本地文件到主机并备份目标文件</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> copy <span class="token parameter variable">-a</span> <span class="token string">&quot;src=/etc/resolv.conf dest=/data/pkgs/test.txt backup=yes&quot;</span>
+</code></pre></div><ul><li>复制本地文件到主机并设置权限和用户组</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> copy <span class="token parameter variable">-a</span> <span class="token string">&quot;src=/etc/resolv.conf dest=/data/pkgs/test.txt owner=root group=root mode=0644&quot;</span>
+</code></pre></div><h3 id="_3-2-5-synchronize">3.2.5 synchronize</h3> <ul><li>同步本机文件夹到远程主机</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> synchronize <span class="token parameter variable">-a</span> <span class="token string">&quot;src=/data/pkgs/testdir/ dest=/data/pkgs/testdir1/&quot;</span>
+</code></pre></div><ul><li>同步远程主机文件夹到本机</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> synchronize <span class="token parameter variable">-a</span> <span class="token string">&quot;src=/data/pkgs/testdir/ dest=/data/pkgs/testdir3/ mode=pull&quot;</span>
+</code></pre></div><h3 id="_3-2-6-script">3.2.6  script</h3> <div class="custom-block tip"><p class="custom-block-title">先创建本地测试脚本文件</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">echo</span> <span class="token string">&quot;ps -ef |grep ssh&quot;</span> <span class="token operator">&gt;</span> /data/pkgs/localscript.sh
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;print('hello python')&quot;</span> <span class="token operator">&gt;</span> /data/pkgs/localscript.py
+</code></pre></div></div> <ul><li>在目标主机上执行本机shell脚本</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> script <span class="token parameter variable">-a</span> <span class="token string">&quot;/data/pkgs/localscript.sh --some-argument 1234&quot;</span>
+</code></pre></div><ul><li>在目标主机上执行本机python脚本</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> script <span class="token parameter variable">-a</span> <span class="token string">&quot;/data/pkgs/localscript.py executable=python3&quot;</span>
+</code></pre></div><h3 id="_3-2-7-service">3.2.7 service</h3> <ul><li>启动服务</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">service</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;name=httpd state=started&quot;</span>
+</code></pre></div><ul><li>停止服务</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">service</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;name=httpd state=stopped&quot;</span>
+</code></pre></div><ul><li>重启服务</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">service</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;name=httpd state=restarted&quot;</span>
+</code></pre></div><ul><li>重新加载服务</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">service</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;name=httpd state=reloaded&quot;</span>
+</code></pre></div><ul><li>设置为开机启动</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">service</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;name=httpd enabled=yes&quot;</span>
+</code></pre></div><ul><li>取消开机启动</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> <span class="token function">service</span> <span class="token parameter variable">-a</span> <span class="token string">&quot;name=httpd enabled=no&quot;</span>
+</code></pre></div><h3 id="_3-2-8-yum">3.2.8  yum</h3> <ul><li>使用yum安装软件</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=sl&quot;</span>
+</code></pre></div><ul><li>使用yum安装本地rpm包</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=/data/pkgs/sl-5.02-1.el7.x86_64.rpm&quot;</span>
+</code></pre></div><ul><li>使用yum安装在线rpm包</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.22.1-1.el8.ngx.x86_64.rpm&quot;</span>
+</code></pre></div><ul><li>仅下载安装包</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>
+ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=sl state=latest download_only=true&quot;</span>
+
+ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.22.1-1.el8.ngx.x86_64.rpm download_only=true&quot;</span>
+</code></pre></div><ul><li>指定包安装器</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#使用yum安装</span>
+ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=sl use_backend=yum&quot;</span>
+
+<span class="token comment">#使用dnf安装</span>
+ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=sl use_backend=dnf&quot;</span>
+</code></pre></div><ul><li>使用yum卸载软件</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code>ansible localhost <span class="token parameter variable">-m</span> yum <span class="token parameter variable">-a</span> <span class="token string">&quot;name=sl state=absent&quot;</span>
+</code></pre></div><p>.</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.302b2892.js" defer></script><script src="/assets/js/2.b70f0925.js" defer></script><script src="/assets/js/15.01369678.js" defer></script>
+  </body>
+</html>
