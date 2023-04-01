@@ -11,7 +11,7 @@ const navs = [
     ]
     },
     { text: 'Tools', link: '/tools/' },
-    { text: 'External', link: 'https://google.com' },
+    { text: 'External', link: 'https://baidu.com' },
   ]
 
 module.exports = navs;
